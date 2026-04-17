@@ -26,6 +26,7 @@ public abstract class Vehiculo {
     public Marca getMarca(){
         return marca;
     }
+    
     public VehiculoTipo getTipo(){
         return tipo;
     }
@@ -42,6 +43,10 @@ public abstract class Vehiculo {
         return sucursal.getCodigo();
     }
     
+    public String getModelo(){
+        return modelo;
+    }
+    
     public double calcularConsumo(double kilometros) {
         return 0;
     }
@@ -51,6 +56,6 @@ public abstract class Vehiculo {
     }
     @Override
     public String toString() {
-        return patente + " - " + marca + " " + modelo + " - Sucursal: " + sucursal.getCodigo();
+        return marca.getNombre() + " " + modelo + " - Sucursal: " + sucursal.getCodigo();
     }
 }
