@@ -28,10 +28,10 @@ public class Persistencia {
         Sucursal s1 = sucursales.get(0);
         Sucursal s2 = sucursales.get(1);
         
-        Marca renault = new Marca("Renault", "Francia");
-        Marca ford = new Marca("Ford", "EEUU");
-        Marca iveco = new Marca("Iveco", "Italia");
-        Marca mercedes = new Marca ("Mercedes", "Alemania");
+        Marca renault = new Marca("Renault","Francia");
+        Marca ford = new Marca("Ford","EEUU");
+        Marca iveco = new Marca("Iveco","Italia");
+        Marca mercedes = new Marca("Mercedes","Alemania");
         
         VehiculoElectrico v1 = new VehiculoElectrico("AE123FG", renault, "Kangoo E-Tech", 2020, 1000, s1, 16);
         VehiculoElectrico v2 = new VehiculoElectrico("AF456HI", ford, "E-Transit", 2021, 1300, s2, 16);
@@ -39,10 +39,10 @@ public class Persistencia {
         VehiculoCombustible v3 = new VehiculoCombustible("AC789JK", iveco, "Daily", 2023, 1200, s1, 8, 1.5);
         VehiculoCombustible v4 = new VehiculoCombustible("AD321LM", mercedes, "Sprinter", 2020, 1200, s2, 7, 1);
         
-        vehiculos.add(v1);
+        /*vehiculos.add(v1);
         vehiculos.add(v2);
         vehiculos.add(v3);
-        vehiculos.add(v4);
+        vehiculos.add(v4);*/
     }
     
     public static ArrayList<Vehiculo> getVehiculos(){
@@ -53,6 +53,10 @@ public class Persistencia {
         return vehiculos.stream()
                 .filter(v -> v.getPatente().equals(patente))
                 .findFirst();
+    }
+    
+    public static void agregarVehiculo(Vehiculo v){
+        vehiculos.add(v);
     }
     
     public static void inicializar(){

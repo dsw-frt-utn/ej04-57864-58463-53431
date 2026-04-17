@@ -2,7 +2,7 @@
 package domain;
 
 public class Marca {
-     private String nombre;
+    private String nombre;
     private String pais;
 
     public Marca(String nombre, String pais) {
@@ -16,5 +16,10 @@ public class Marca {
 
     public String getPais() {
         return pais;
+    }
+
+    @Override
+    public String toString() {
+        return nombre;
     }
 }
